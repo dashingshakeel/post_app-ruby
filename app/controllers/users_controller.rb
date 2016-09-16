@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.create(user_params)
       if @user.save
         flash[:success] = "Welcome to the Sample App!"
         redirect_to @user
@@ -16,4 +16,13 @@ class UsersController < ApplicationController
         render 'new'
     end
   end
+
+  private
+
+    def set_user
+      @user = User.find(params[:id])
+    end
+    def user_params
+      params.require(:user).permit(:name, :email, :password,:password_confirmation)
+    end
 end

@@ -4,6 +4,18 @@ $grayMediumLight: #eaeaea;
 html {
 overflow-y: scroll;
 }
+.signup{
+
+  padding:50px;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:300px;
+  background-color:#F1F1F1;
+  margin-left:600px;
+  border:none;
+  border-radius: 5px;
+
+}
 body {
 padding-top: 60px;
 }
@@ -16,16 +28,43 @@ ul {
 list-style: none;
 margin: 0 0 18px 0;
 }
+.navbar-nav{
+  font-weight:12px;
+  color:yellow;
+}
+.ul-1{
+  display:inline;
+  float:right;
+}
+
+.ul{
+  float:right;
+  display: inline;
+}
+.ul li{
+ display:inline; 
+  text-decoration:none;
+  list-style:none;
+}
 
 }
 input, textarea, select, .uneditable-input {
 border: 1px solid #bbb;
 width: 100%;
 border-radius: 4px;
-padding:10px;
-height: auto;
+padding:2px;
+height:25px;
 margin-bottom: 15px;
 @include_box_sizing;
+}
+.h1{
+  background-color:black;
+  color:white;
+}
+input[type=submit]{
+  height:35px;
+  width:150px;
+  margin-left:40px;
 }
 aside {
 section {
