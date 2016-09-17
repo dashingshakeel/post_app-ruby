@@ -16,6 +16,13 @@ overflow-y: scroll;
   border-radius: 5px;
 
 }
+.gravatar {
+    float:  left;
+    margin-right: 10px;
+}
+.gravatar_edit  {
+    margin-top: 15px;
+}
 
 body {
 padding-top: 60px;
@@ -57,6 +64,15 @@ padding:2px;
 height:25px;
 margin-bottom: 15px;
 @include_box_sizing;
+}
+input,  textarea, select, .uneditable-input   {
+    border: 1px solid #bbb;
+    width:  100%;
+    margin-bottom:  15px;
+    
+}
+input {
+    height: auto  !important;
 }
 .h1{
   background-color:black;
@@ -153,13 +169,25 @@ p {
 font-size: 1.1em;
 line-height: 1.7em;
 }
-.navbar-inner{
-  background-color:black;
-  height:40px;
+.checkbox {   margin-top: -10px;
+    margin-bottom:  10px;
+    span  {
+        margin-left:  20px;
+        font-weight:  normal;
+    }
 }
-nav ul{
-
-  width:200px;
+.users  {
+    list-style: none;
+    margin: 0;
+    li  {
+        overflow: auto;
+        padding:  10px  0;
+        border-bottom:  1px solid $gray-lighter;
+    }
+}
+#session_remember_me  {
+    width:  auto;
+    margin-left:  0;
 }
 
 /* header */
