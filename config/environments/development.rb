@@ -18,7 +18,7 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  host  = 'localhost:25'
+  host  = 'localhost:3000'
   config.action_mailer.delivery_method  = :test
   config.action_mailer.default_url_options  = { host: host  }
 
