@@ -1,0 +1,2 @@
+ ENV["SMTP_PASSWORD"]=shkldon0@gmail.com 
+ ENV["SMTP_USER"]=don009rauf
