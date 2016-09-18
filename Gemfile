@@ -7,6 +7,9 @@ gem 'rails', '4.2.6'
 gem 'sqlite3'
 gem 'bcrypt-ruby'
 gem 'bcrypt'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

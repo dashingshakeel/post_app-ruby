@@ -1,6 +1,8 @@
 class User  < ActiveRecord::Base
+  has_many  :microposts, dependent: :destroy
   attr_accessor :remember_token,:forget,:activation_token,:reset_token
   before_save :downcase_email
+
   validates :name,  presence: true, length: { maximum:  50  }
   before_create :create_activation_digest
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -13,6 +15,9 @@ class User  < ActiveRecord::Base
   def User.digest(string)
     cost  = ActiveModel::SecurePassword.min_cost  ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+  def feed
+    Micropost.where("user_id  = ?", id)
   end
   # Returns a random  token.
   def User.new_token
