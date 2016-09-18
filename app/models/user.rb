@@ -17,7 +17,7 @@ class User  < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
   def feed
-    Micropost.where("user_id  = ?", user.id)
+    Micropost.where("user_id  = ?", id)
   end
   # Returns a random  token.
   def User.new_token
